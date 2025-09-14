@@ -193,18 +193,18 @@ function Home() {
   }, []);
 
   return (
-    <div className="w-full h-[100vh] bg-gradient-to-t from-[black] to-[#02023d] flex justify-center items-center flex-col gap-[15px] overflow-hidden">
+    <div className="w-full h-[100vh] bg-gradient-to-t from-[black] to-[#02023d] flex justify-center items-center flex-col gap-[15px] overflow-hidden relative">
       <CgMenuRight
         className="lg:hidden text-white absolute top-[20px] right-[20px] w-[25px] h-[25px]"
         onClick={() => setHam(true)}
       />
       <div
-        className={`absolute lg:hidden top-0 w-full h-full bg-[#00000053] backdrop-blur-lg p-[20px] flex flex-col gap-[20px] items-start ${
-          ham ? "translate-x-0" : "translate-x-full"
-        } transition-transform`}
+        className={`fixed lg:hidden top-0 right-0 w-full h-full bg-[#00000053] backdrop-blur-lg p-[20px] flex flex-col gap-[20px] items-start ${
+      ham ? "translate-x-0" : "translate-x-full"
+    } transition-transform`}
       >
         <RxCross1
-          className=" text-white absolute top-[20px] right-[20px] w-[25px] h-[25px]"
+          className="text-white absolute top-[20px] right-[20px] w-[25px] h-[25px]"
           onClick={() => setHam(false)}
         />
         <button
